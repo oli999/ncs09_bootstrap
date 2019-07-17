@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step01_GridSystem2.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+	<style>
+        .container{
+            border: 1px solid red;
+        }
+        .row{
+            border: 1px dotted blue;
+        }
+        .row > div{
+            border: 1px solid orange;
+        }	
+    </style>	
+</head>
+<body>
+<div class="container">
+    <h3>하나의 행을 두개의 칼럼으로 구성</h3>
+    <div class="row">
+        <div class="col-xs-6">칼럼1</div>
+        <div class="col-xs-6">칼럼2</div>
+    </div>
+
+	<h3>하나의 행을 세개의 칼럼으로 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">column1</div>
+		<div class="col-xs-4">column2</div>
+		<div class="col-xs-4">column3</div>
+    </div>
+
+    <h3>4:8 비율의 칼럼 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">4</div>
+		<div class="col-xs-8">8</div>
+    </div>
+
+    <h3>4:8 비율의 칼럼 구성</h3>
+	<div class="row">
+		<div class="col-xs-4">
+           <h4>side 컨텐츠</h4>
+           <ul>
+               <li>김구라</li>
+               <li>해골</li>
+               <li>원숭이</li>
+           </ul>
+        </div>
+		<div class="col-xs-8">
+            <h4>main 컨텐츠</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quo aut reiciendis, itaque ratione voluptates magni libero eum ea laudantium magnam, tenetur veritatis, amet inventore in soluta voluptatem consequuntur nihil.</p>
+        </div>
+	</div>
+</div>    
+</body>
+</html>
