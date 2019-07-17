@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step02_Alert.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <h3>alert 스타일</h3>
+    <div class="alert alert-success">성공입니다.</div>
+    <div class="alert alert-info">등록 되었습니다.</div>
+    <div class="alert alert-warning">확인하세요.</div>
+    <div class="alert alert-danger">오류가 발생했습니다.</div>
+
+    <h3>닫기 버튼이 있는 Alert 스타일</h3>
+    <div class="alert alert-danger">
+        오류가 발생했습니다.
+        <button class="close" id="closeBtn">&times;</button>
+    </div>
+    
+    <h3>bootstrap 의 기능을 사용하는 alert</h3>
+    <div class="alert alert-danger alert-dismissible">
+        오류가 발생했습니다.
+        <button class="close" data-dismiss="alert">&times;</button>
+    </div>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<!-- jquery plugin 로딩하기 -->
+<script src="js/bootstrap.js"></script>
+<script>
+    //닫기 버튼을 눌럿을때 알림을 제거해 보세요.
+    $("#closeBtn").click(function(){
+        $(this).parent().remove();
+    });
+</script>
+</body>
+</html>
