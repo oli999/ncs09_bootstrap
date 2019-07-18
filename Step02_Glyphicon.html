@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step02_Glyphicon.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        #one{
+            font-size: 50px;
+            color: aquamarine;
+        }
+        /* 아이디가 one 인 곳에 마우스가 hover 되면 */
+        #one:hover{
+            /* 
+                rotate 키프레임을 1 초동안 일정한 비율로 
+                무한 반복해서 적용 시키기 
+            */
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Glyphicon 출력하기</h1>
+	<span class="glyphicon glyphicon-search"></span>
+	<span class="glyphicon glyphicon-trash"></span>
+	<span class="glyphicon glyphicon-send"></span>
+    <span class="glyphicon glyphicon-refresh"></span>
+    <br/>
+    <button class="btn btn-danger">
+        삭제 
+        <i class="glyphicon glyphicon-trash"></i>
+    </button>
+
+    <button class="btn btn-success btn-xs">
+        <i class="glyphicon glyphicon-send"></i>
+        <span class="sr-only">전송하기</span>
+    </button>
+    <br/>
+    <i class="glyphicon glyphicon-refresh" id="one"></i>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script>
+
+</script>
+</body>
+</html>
