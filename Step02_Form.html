@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step02_Form.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div class="container">
+    <h3>input 요소의 기본 스타일</h3>
+    <input type="text"/>
+    <input type="text" class="form-control"/>
+    
+    <div class="row">
+        <div class="col-xs-6">
+            <input type="text" class="form-control"/>
+        </div>
+    </div>
+
+    <h3>기본 form 구성하기</h3>
+    <form action="">
+        <div class="form-group has-success">
+            <label class="control-label" for="email">이메일</label>
+            <input type="text" class="form-control" id="email"/>
+            <p class="help-block">반드시 입력하세요</p>
+        </div>
+		<div class="form-group has-error">
+            <label class="control-label" for="pwd">비밀번호</label>
+            <input type="password" class="form-control" id="pwd"/>
+            <p class="help-block">비밀번호를 확인 하세요</p>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"/> 아이디 저장 
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">로그인</button>
+        <button type="reset" class="btn btn-warning">취소</button>
+    </form>
+    <div class="row">
+        <div class="col-sm-6">
+            <h3>기본 form 구성하기</h3>
+            <form action="">
+                <div class="form-group has-success">
+                    <label class="control-label" for="email">이메일</label>
+                    <input type="text" class="form-control" id="email"/>
+                    <p class="help-block">반드시 입력하세요</p>
+                </div>
+                <div class="form-group has-error">
+                    <label class="control-label" for="pwd">비밀번호</label>
+                    <input type="password" class="form-control" id="pwd"/>
+                    <p class="help-block">비밀번호를 확인 하세요</p>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"/> 아이디 저장 
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">로그인</button>
+                <button type="reset" class="btn btn-warning">취소</button>
+            </form>            
+        </div>
+    </div>
+</div>    
+</body>
+</html>

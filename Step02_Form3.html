@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_form3.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h1>form 유효성 검증 스타일</h1>
+	<form action="">
+		<div class="form-group has-success has-feedback">
+			<label class="control-label" for="email">이메일</label>
+			<input type="text" class="form-control" id="email"/>
+			<p class="help-block">반드시 입력하세요</p>
+			<span class="glyphicon glyphicon-ok form-control-feedback"></span>
+		</div>
+		<div class="form-group has-error has-feedback">
+			<label class="control-label" for="pwd">비밀번호</label>
+			<input type="password" class="form-control" id="pwd"/>
+			<p class="help-block">비밀번호를 확인 하세요</p>
+			<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+		</div>
+		<button type="submit" class="btn btn-primary">로그인</button>
+		<button type="reset" class="btn btn-warning">취소</button>
+	</form>	
+</div>	
+</body>
+</html>
