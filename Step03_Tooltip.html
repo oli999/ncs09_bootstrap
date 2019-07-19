@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Step03_Tooltip.html</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>tooltip 테스트</h1>
+    <button class="btn btn-danger" id="delBtn"
+        title="모든 컨텐츠가 삭제 됩니다">삭제</button>
+
+    <button class="btn btn-warning my-group" 
+        title="컨텐츠가 수정됩니다.">수정</button>
+    <a class="my-group" href="#" title="자세히 보기로 이동">이동</a>
+    
+    <div class="box"></div>
+    <button id="myBtn"
+        title="해당 div 를 삭제 하려면 여기를 누르세요">click me!</button>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    // jquery plugin 동작 (bootstrap 이 제공하는 동작)
+    $("#delBtn").tooltip();
+
+    $(".my-group").tooltip({
+        placement: "bottom", // top | right | bottom | left | auto
+        trigger: "hover focus" // hover | focus | manual
+    });
+
+    //tooltip 을 수동으로(manual) 로 띄울수 있도록 
+    $("#myBtn").tooltip({
+        trigger:"manual"
+    });
+
+    $(".box").mouseover(function(){
+        //tooltip 띄우기
+        $("#myBtn").tooltip("show");
+    });
+    $(".box").mouseout(function(){
+        //tooltip 숨기기
+        $("#myBtn").tooltip("hide");
+    });
+
+    //버튼을 클릭했을때 
+    $("#myBtn").click(function(){
+        //div 삭제 
+        $(".box").remove();
+    });
+
+</script>    
+</body>
+</html>
