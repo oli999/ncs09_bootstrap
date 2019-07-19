@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_Scrollspy.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		/* 1. 스크롤을 감시할 요소에 position: relative 를 부여한다. */
+		body{
+			position: relative;
+		}
+		.spacer{
+			height: 500px;
+			background-color: #cecece;
+		}
+
+		ul li.active a{
+			font-weight: bold;
+			text-decoration: underline;
+		}
+
+		#navbar-example{
+			position: fixed;
+			left: 0;
+			top: 0;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<!-- 
+	2. 스크롤을 감시할 요소에 
+	data-tatget=".nav 요소를 감싸고 있는 div 의 선택자" , 
+	data-spy="scroll" -->
+<body  data-target="#navbar-example" data-spy="scroll" >
+<div id="navbar-example">
+	<!-- 3. ul 에 nav 클래스를 추가 한다. -->
+	<ul class="nav">
+		<li class="active"><a href="#one">one</a></li>
+		<li><a href="#two">two</a></li>
+		<li><a href="#three">three</a></li>
+		<li><a href="#four">four</a></li>
+	</ul>
+</div>
+<div class="container">
+	<h1> scroll 되는 위치를 감지해서 li 의 active 에 반영</h1>
+	<p id="one">one </p>
+	<div class="spacer"></div>
+	<p id="two">two</p>
+	<div class="spacer"></div>
+	<p id="three">three</p>
+	<div class="spacer"></div>
+	<p id="four">four</p>
+	<div class="spacer"></div>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_ScrollSpy2.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<style>
+		/* 1. */
+		body{
+			position: relative;
+		}
+		.spacer{
+			height: 1000px;
+			background-color: #cecece;
+		}
+	</style>
+</head>
+<!-- 2. -->
+<body data-target=".collapse" data-spy="scroll">
+<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar-header">
+		<a href="#" class="navbar-brand">Hyundai</a>
+		<button class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<div class="collapse navbar-collapse" >
+		<!-- 3. nav 클래스 추가  -->
+		<ul class="nav navbar-nav">
+			<li class="active"><a href="#one">One</a></li>
+			<li><a href="#two">Two</a></li>
+			<li><a href="#three">Three</a></li>
+			<li><a href="#four">Four</a></li>
+		</ul>
+	</div>
+</div>
+<div class="container">	
+	<p id="one">one</p>
+	<div class="spacer"></div>
+	<p id="two">two</p>
+	<div class="spacer"></div>
+	<p id="three">three</p>
+	<div class="spacer"></div>
+	<p id="four">four</p>
+	<div class="spacer"></div>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>	
+</body>
+</html>
