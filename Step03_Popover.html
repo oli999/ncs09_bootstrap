@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>Step03_Popover.html</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+</head>
+<body>
+<div class="container">
+	<h1>popover 테스트</h1>
+	<button class="btn btn-primary" 
+		data-title="제목"
+		data-content="내용입니다."
+		data-toggle="popover"
+		id="one">눌러보셈</button>
+	<br/>
+	<button class="btn btn-primary" 
+		data-toggle="popover"
+		id="two">눌러보셈</button>
+	<br/>
+	<div class="row">
+		<div class="col-xs-6">
+			<input type="text" class="form-control" id="inputMsg"/>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+	// #one 에 popover() 동작 시키기 
+	$("#one").popover();
+
+	$("#two").popover({
+		title:"제목",  /* popover 의 제목 */
+		content:"내용 입니다.", /* popover 의 내용*/
+		placement:"top", /* 위치  top | right(기본) | bottom | left | auto */
+		trigger: "hover", /*  click(기본) | hover | focus | manual */
+	});	
+    
+	// input 요소에 focus 가 왔을때 popover 띄우기 
+	$("#inputMsg").popover({
+		content:"메세지를 반드시 입력하세요.",
+		placement:"bottom",
+		trigger:"focus"
+	});
+</script>	
+</body>
+</html>
